@@ -1,0 +1,573 @@
+Archive member included because of file (symbol)
+
+/home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                              /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o (GPIOPadConfigSet)
+/home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                              /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o) (IntRegister)
+/home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                              /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o (SSIConfigSetExpClk)
+/home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                              /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o (SysCtlPeripheralEnable)
+/home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(cpu.o)
+                              /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o) (CPUcpsid)
+
+Allocating common symbols
+Common symbol       size              file
+
+ulDelta             0x4               uart.o
+baud                0x4               uart.o
+data                0x4               uart.o
+ulDiv               0x4               uart.o
+UARTclk             0x4               uart.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x00000000         0x00040000         xr
+SRAM             0x20000000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+LOAD uart.o
+LOAD startup_gcc.o
+LOAD /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a
+START GROUP
+LOAD /home/usuario/tools/arm-2011.03/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2/libgcc.a
+LOAD /home/usuario/tools/arm-2011.03/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a
+END GROUP
+
+.text           0x00000000     0x2460
+                0x00000000                _text = .
+ *(.isr_vector)
+ .isr_vector    0x00000000       0xf0 startup_gcc.o
+                0x00000000                g_pfnVectors
+ *(.text*)
+ .text          0x000000f0      0x7ec /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+                0x00000200                RIT128x96x4Clear
+                0x000002c0                RIT128x96x4StringDraw
+                0x000006c0                RIT128x96x4ImageDraw
+                0x00000770                RIT128x96x4Enable
+                0x000007d0                RIT128x96x4Disable
+                0x0000081c                RIT128x96x4Init
+                0x000008a8                RIT128x96x4DisplayOn
+                0x000008d0                RIT128x96x4DisplayOff
+ .text          0x000008dc      0x5b0 uart.o
+                0x000008dc                envio
+                0x000008f4                send
+                0x00000944                resetTimer
+                0x000009d8                main
+ .text          0x00000e8c       0x88 startup_gcc.o
+                0x00000e98                ResetISR
+ .text          0x00000f14        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+ .text.GPIOGetIntNumber
+                0x00000f14       0xf4 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+ .text.GPIODirModeSet
+                0x00001008       0x36 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x00001008                GPIODirModeSet
+ .text.GPIODirModeGet
+                0x0000103e       0x22 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000103e                GPIODirModeGet
+ .text.GPIOIntTypeSet
+                0x00001060       0x5a /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x00001060                GPIOIntTypeSet
+ .text.GPIOIntTypeGet
+                0x000010ba       0x2e /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x000010ba                GPIOIntTypeGet
+ .text.GPIOPadConfigSet
+                0x000010e8      0x10e /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x000010e8                GPIOPadConfigSet
+ .text.GPIOPadConfigGet
+                0x000011f6       0x88 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x000011f6                GPIOPadConfigGet
+ .text.GPIOPinIntEnable
+                0x0000127e        0xc /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000127e                GPIOPinIntEnable
+ .text.GPIOPinIntDisable
+                0x0000128a        0xe /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000128a                GPIOPinIntDisable
+ .text.GPIOPinIntStatus
+                0x00001298        0xe /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x00001298                GPIOPinIntStatus
+ .text.GPIOPinIntClear
+                0x000012a6        0x6 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x000012a6                GPIOPinIntClear
+ .text.GPIOPinRead
+                0x000012ac        0x6 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x000012ac                GPIOPinRead
+ .text.GPIOPinWrite
+                0x000012b2        0x6 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x000012b2                GPIOPinWrite
+ .text.GPIOPinTypeADC
+                0x000012b8       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x000012b8                GPIOPinTypeADC
+ .text.GPIOPinTypeCAN
+                0x000012d4       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x000012d4                GPIOPinTypeCAN
+ .text.GPIOPinTypeComparator
+                0x000012f0       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x000012f0                GPIOPinTypeComparator
+ .text.GPIOPinTypeGPIOInput
+                0x0000130c       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000130c                GPIOPinTypeGPIOInput
+ .text.GPIOPinTypeGPIOOutput
+                0x00001328       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x00001328                GPIOPinTypeGPIOOutput
+ .text.GPIOPinTypeGPIOOutputOD
+                0x00001344       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x00001344                GPIOPinTypeGPIOOutputOD
+ .text.GPIOPinTypeI2C
+                0x00001360       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x00001360                GPIOPinTypeI2C
+ .text.GPIOPinTypePWM
+                0x0000137c       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000137c                GPIOPinTypePWM
+ .text.GPIOPinTypeQEI
+                0x00001398       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x00001398                GPIOPinTypeQEI
+ .text.GPIOPinTypeSSI
+                0x000013b4       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x000013b4                GPIOPinTypeSSI
+ .text.GPIOPinTypeTimer
+                0x000013d0       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x000013d0                GPIOPinTypeTimer
+ .text.GPIOPinTypeUART
+                0x000013ec       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x000013ec                GPIOPinTypeUART
+ .text.GPIOPinTypeUSBDigital
+                0x00001408       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x00001408                GPIOPinTypeUSBDigital
+ .text.GPIOPinTypeUSBAnalog
+                0x00001424       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x00001424                GPIOPinTypeUSBAnalog
+ .text.GPIOPinTypeI2S
+                0x00001440       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x00001440                GPIOPinTypeI2S
+ .text.GPIOPinTypeEthernetLED
+                0x0000145c       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000145c                GPIOPinTypeEthernetLED
+ .text.GPIOPinTypeEPI
+                0x00001478       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x00001478                GPIOPinTypeEPI
+ .text.GPIOPinConfigure
+                0x00001494       0x4c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x00001494                GPIOPinConfigure
+ .text.GPIOPortIntUnregister
+                0x000014e0       0x16 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x000014e0                GPIOPortIntUnregister
+ .text.GPIOPortIntRegister
+                0x000014f6       0x1a /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+                0x000014f6                GPIOPortIntRegister
+ .text          0x00001510        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+ .text.IntDefaultHandler
+                0x00001510        0x2 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+ *fill*         0x00001512        0x2 00
+ .text.IntRegister
+                0x00001514       0x34 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00001514                IntRegister
+ .text.IntUnregister
+                0x00001548       0x14 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00001548                IntUnregister
+ .text.IntPriorityGroupingSet
+                0x0000155c       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                0x0000155c                IntPriorityGroupingSet
+ .text.IntPriorityGroupingGet
+                0x00001578       0x24 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00001578                IntPriorityGroupingGet
+ .text.IntPrioritySet
+                0x0000159c       0x28 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                0x0000159c                IntPrioritySet
+ .text.IntPriorityGet
+                0x000015c4       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                0x000015c4                IntPriorityGet
+ .text.IntEnable
+                0x000015e0       0x70 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                0x000015e0                IntEnable
+ .text.IntDisable
+                0x00001650       0x70 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00001650                IntDisable
+ .text.IntPendSet
+                0x000016c0       0x60 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                0x000016c0                IntPendSet
+ .text.IntPendClear
+                0x00001720       0x50 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00001720                IntPendClear
+ .text.IntPriorityMaskGet
+                0x00001770        0x4 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00001770                IntPriorityMaskGet
+ .text.IntPriorityMaskSet
+                0x00001774        0x4 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00001774                IntPriorityMaskSet
+ .text.IntMasterDisable
+                0x00001778        0xa /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00001778                IntMasterDisable
+ .text.IntMasterEnable
+                0x00001782        0xa /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00001782                IntMasterEnable
+ .text          0x0000178c        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+ .text.SSIConfigSetExpClk
+                0x0000178c       0x50 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x0000178c                SSIConfigSetExpClk
+ .text.SSIEnable
+                0x000017dc        0xa /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x000017dc                SSIEnable
+ .text.SSIDisable
+                0x000017e6        0xa /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x000017e6                SSIDisable
+ .text.SSIIntEnable
+                0x000017f0        0x8 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x000017f0                SSIIntEnable
+ .text.SSIIntDisable
+                0x000017f8        0xa /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x000017f8                SSIIntDisable
+ .text.SSIIntStatus
+                0x00001802        0xa /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x00001802                SSIIntStatus
+ .text.SSIIntClear
+                0x0000180c        0x4 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x0000180c                SSIIntClear
+ .text.SSIDataPut
+                0x00001810        0xc /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x00001810                SSIDataPut
+ .text.SSIDataPutNonBlocking
+                0x0000181c       0x10 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x0000181c                SSIDataPutNonBlocking
+ .text.SSIDataGet
+                0x0000182c        0xe /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x0000182c                SSIDataGet
+ .text.SSIDataGetNonBlocking
+                0x0000183a       0x14 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x0000183a                SSIDataGetNonBlocking
+ .text.SSIDMAEnable
+                0x0000184e        0x8 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x0000184e                SSIDMAEnable
+ .text.SSIDMADisable
+                0x00001856        0xa /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x00001856                SSIDMADisable
+ .text.SSIBusy  0x00001860        0xa /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x00001860                SSIBusy
+ *fill*         0x0000186a        0x2 00
+ .text.SSIIntUnregister
+                0x0000186c       0x20 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x0000186c                SSIIntUnregister
+ .text.SSIIntRegister
+                0x0000188c       0x20 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+                0x0000188c                SSIIntRegister
+ .text          0x000018ac        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlSRAMSizeGet
+                0x000018ac       0x14 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x000018ac                SysCtlSRAMSizeGet
+ .text.SysCtlFlashSizeGet
+                0x000018c0       0x14 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x000018c0                SysCtlFlashSizeGet
+ .text.SysCtlPinPresent
+                0x000018d4       0x14 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x000018d4                SysCtlPinPresent
+ .text.SysCtlPeripheralPresent
+                0x000018e8       0x44 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x000018e8                SysCtlPeripheralPresent
+ .text.SysCtlPeripheralReset
+                0x0000192c       0x40 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000192c                SysCtlPeripheralReset
+ .text.SysCtlPeripheralEnable
+                0x0000196c       0x20 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000196c                SysCtlPeripheralEnable
+ .text.SysCtlPeripheralDisable
+                0x0000198c       0x24 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000198c                SysCtlPeripheralDisable
+ .text.SysCtlPeripheralSleepEnable
+                0x000019b0       0x20 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x000019b0                SysCtlPeripheralSleepEnable
+ .text.SysCtlPeripheralSleepDisable
+                0x000019d0       0x24 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x000019d0                SysCtlPeripheralSleepDisable
+ .text.SysCtlPeripheralDeepSleepEnable
+                0x000019f4       0x20 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x000019f4                SysCtlPeripheralDeepSleepEnable
+ .text.SysCtlPeripheralDeepSleepDisable
+                0x00001a14       0x24 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001a14                SysCtlPeripheralDeepSleepDisable
+ .text.SysCtlPeripheralClockGating
+                0x00001a38       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001a38                SysCtlPeripheralClockGating
+ .text.SysCtlIntEnable
+                0x00001a54       0x10 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001a54                SysCtlIntEnable
+ .text.SysCtlIntDisable
+                0x00001a64       0x10 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001a64                SysCtlIntDisable
+ .text.SysCtlIntClear
+                0x00001a74        0xc /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001a74                SysCtlIntClear
+ .text.SysCtlIntStatus
+                0x00001a80       0x18 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001a80                SysCtlIntStatus
+ .text.SysCtlLDOSet
+                0x00001a98        0xc /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001a98                SysCtlLDOSet
+ .text.SysCtlLDOGet
+                0x00001aa4        0xc /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001aa4                SysCtlLDOGet
+ .text.SysCtlLDOConfigSet
+                0x00001ab0        0xc /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001ab0                SysCtlLDOConfigSet
+ .text.SysCtlReset
+                0x00001abc       0x10 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001abc                SysCtlReset
+ .text.SysCtlResetCauseGet
+                0x00001acc        0xc /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001acc                SysCtlResetCauseGet
+ .text.SysCtlResetCauseClear
+                0x00001ad8       0x10 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001ad8                SysCtlResetCauseClear
+ .text.SysCtlBrownOutConfigSet
+                0x00001ae8       0x10 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001ae8                SysCtlBrownOutConfigSet
+ .text.SysCtlDelay
+                0x00001af8        0x6 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001af8                SysCtlDelay
+ *fill*         0x00001afe        0x2 00
+ .text.SysCtlClockSet
+                0x00001b00      0x160 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001b00                SysCtlClockSet
+ .text.SysCtlClockGet
+                0x00001c60      0x1e0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001c60                SysCtlClockGet
+ .text.SysCtlPWMClockSet
+                0x00001e40       0x14 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001e40                SysCtlPWMClockSet
+ .text.SysCtlPWMClockGet
+                0x00001e54       0x18 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001e54                SysCtlPWMClockGet
+ .text.SysCtlADCSpeedSet
+                0x00001e6c       0x20 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001e6c                SysCtlADCSpeedSet
+ .text.SysCtlADCSpeedGet
+                0x00001e8c       0x10 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001e8c                SysCtlADCSpeedGet
+ .text.SysCtlIOSCVerificationSet
+                0x00001e9c       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001e9c                SysCtlIOSCVerificationSet
+ .text.SysCtlMOSCVerificationSet
+                0x00001eb8       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001eb8                SysCtlMOSCVerificationSet
+ .text.SysCtlPLLVerificationSet
+                0x00001ed4       0x1c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001ed4                SysCtlPLLVerificationSet
+ .text.SysCtlClkVerificationClear
+                0x00001ef0       0x10 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001ef0                SysCtlClkVerificationClear
+ .text.SysCtlGPIOAHBEnable
+                0x00001f00       0x14 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001f00                SysCtlGPIOAHBEnable
+ .text.SysCtlGPIOAHBDisable
+                0x00001f14       0x14 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001f14                SysCtlGPIOAHBDisable
+ .text.SysCtlUSBPLLEnable
+                0x00001f28       0x10 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001f28                SysCtlUSBPLLEnable
+ .text.SysCtlUSBPLLDisable
+                0x00001f38       0x10 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001f38                SysCtlUSBPLLDisable
+ .text.SysCtlI2SMClkSet
+                0x00001f48       0xec /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00001f48                SysCtlI2SMClkSet
+ .text.SysCtlDeepSleep
+                0x00002034       0x20 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00002034                SysCtlDeepSleep
+ .text.SysCtlSleep
+                0x00002054        0x4 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00002054                SysCtlSleep
+ .text.SysCtlIntUnregister
+                0x00002058       0x12 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00002058                SysCtlIntUnregister
+ .text.SysCtlIntRegister
+                0x0000206a       0x14 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000206a                SysCtlIntRegister
+ .text          0x0000207e        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(cpu.o)
+ .text.CPUcpsid
+                0x0000207e        0x8 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(cpu.o)
+                0x0000207e                CPUcpsid
+ .text.CPUprimask
+                0x00002086        0x6 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(cpu.o)
+                0x00002086                CPUprimask
+ .text.CPUcpsie
+                0x0000208c        0x8 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(cpu.o)
+                0x0000208c                CPUcpsie
+ .text.CPUwfi   0x00002094        0x4 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(cpu.o)
+                0x00002094                CPUwfi
+ .text.CPUbasepriSet
+                0x00002098        0x6 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(cpu.o)
+                0x00002098                CPUbasepriSet
+ .text.CPUbasepriGet
+                0x0000209e        0x6 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(cpu.o)
+                0x0000209e                CPUbasepriGet
+ *(.rodata*)
+ .rodata        0x000020a4      0x244 /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+ .rodata.str1.4
+                0x000022e8       0x2c uart.o
+ .rodata.g_pulGPIOBaseAddrs
+                0x00002314       0x48 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+ .rodata.g_pulPriority
+                0x0000235c       0x20 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+ .rodata.g_pulRegs
+                0x0000237c       0x48 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+ .rodata.g_pulDCRegs
+                0x000023c4       0x10 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+ .rodata.g_pulXtals
+                0x000023d4       0x5c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+ .rodata.g_pulDCGCRegs
+                0x00002430        0xc /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+ .rodata.g_pulRCGCRegs
+                0x0000243c        0xc /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+ .rodata.g_pulSCGCRegs
+                0x00002448        0xc /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+ .rodata.g_pulSRCRRegs
+                0x00002454        0xc /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00002460                _etext = .
+
+.glue_7         0x00002460        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x00002460        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x00002460        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x00002460        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.data           0x20000000      0x13c load address 0x00002460
+                0x20000000                _data = .
+ *(vtable)
+ vtable         0x20000000      0x11c /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+ *(.data*)
+ .data          0x2000011c        0x0 /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+ .data          0x2000011c       0x20 uart.o
+                0x2000011c                caracter
+                0x2000012c                secuencia
+                0x20000138                size
+ .data          0x2000013c        0x0 startup_gcc.o
+ .data          0x2000013c        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+ .data          0x2000013c        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+ .data          0x2000013c        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+ .data          0x2000013c        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+ .data          0x2000013c        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(cpu.o)
+                0x2000013c                _edata = .
+
+.bss            0x2000013c      0x12c load address 0x0000259c
+                0x2000013c                _bss = .
+ *(.bss*)
+ .bss           0x2000013c        0xc /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+ .bss           0x20000148        0xc uart.o
+                0x20000148                i
+                0x20000149                lose
+                0x2000014c                j
+                0x20000150                win
+ .bss           0x20000154      0x100 startup_gcc.o
+ .bss           0x20000254        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+ .bss           0x20000254        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+ .bss           0x20000254        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+ .bss           0x20000254        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+ .bss           0x20000254        0x0 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(cpu.o)
+ *(COMMON)
+ COMMON         0x20000254       0x14 uart.o
+                0x20000254                ulDelta
+                0x20000258                baud
+                0x2000025c                data
+                0x20000260                ulDiv
+                0x20000264                UARTclk
+                0x20000268                _ebss = .
+OUTPUT(uart.elf elf32-littlearm)
+
+.debug_abbrev   0x00000000      0x2e4
+ .debug_abbrev  0x00000000       0xe1 /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+ .debug_abbrev  0x000000e1      0x144 uart.o
+ .debug_abbrev  0x00000225       0xbf startup_gcc.o
+
+.debug_info     0x00000000      0x9a0
+ .debug_info    0x00000000      0x420 /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+ .debug_info    0x00000420      0x43b uart.o
+ .debug_info    0x0000085b      0x145 startup_gcc.o
+
+.debug_line     0x00000000      0x4f5
+ .debug_line    0x00000000      0x2b6 /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+ .debug_line    0x000002b6      0x1ea uart.o
+ .debug_line    0x000004a0       0x55 startup_gcc.o
+
+.debug_loc      0x00000000      0xa1c
+ .debug_loc     0x00000000      0x5d3 /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+ .debug_loc     0x000005d3      0x416 uart.o
+ .debug_loc     0x000009e9       0x33 startup_gcc.o
+
+.debug_pubnames
+                0x00000000      0x1b0
+ .debug_pubnames
+                0x00000000       0xce /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+ .debug_pubnames
+                0x000000ce       0xb2 uart.o
+ .debug_pubnames
+                0x00000180       0x30 startup_gcc.o
+
+.debug_pubtypes
+                0x00000000       0x31
+ .debug_pubtypes
+                0x00000000       0x1f /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+ .debug_pubtypes
+                0x0000001f       0x12 uart.o
+
+.debug_aranges  0x00000000       0x60
+ .debug_aranges
+                0x00000000       0x20 /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+ .debug_aranges
+                0x00000020       0x20 uart.o
+ .debug_aranges
+                0x00000040       0x20 startup_gcc.o
+
+.debug_str      0x00000000      0x30f
+ .debug_str     0x00000000      0x219 /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+                                0x245 (size before relaxing)
+ .debug_str     0x00000219       0x85 uart.o
+                                 0xd5 (size before relaxing)
+ .debug_str     0x0000029e       0x71 startup_gcc.o
+                                 0xc0 (size before relaxing)
+
+.comment        0x00000000       0xd9
+ .comment       0x00000000       0x2a /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+                                 0x2b (size before relaxing)
+ .comment       0x00000000       0x2b uart.o
+ .comment       0x00000000       0x2b startup_gcc.o
+ .comment       0x0000002a       0x23 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+ .comment       0x0000004d       0x23 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+ .comment       0x00000070       0x23 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+ .comment       0x00000093       0x23 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+ .comment       0x000000b6       0x23 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(cpu.o)
+
+.ARM.attributes
+                0x00000000       0x31
+ .ARM.attributes
+                0x00000000       0x31 /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+ .ARM.attributes
+                0x00000031       0x31 uart.o
+ .ARM.attributes
+                0x00000062       0x31 startup_gcc.o
+ .ARM.attributes
+                0x00000093       0x31 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(gpio.o)
+ .ARM.attributes
+                0x000000c4       0x31 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(interrupt.o)
+ .ARM.attributes
+                0x000000f5       0x31 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(ssi.o)
+ .ARM.attributes
+                0x00000126       0x31 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(sysctl.o)
+ .ARM.attributes
+                0x00000157       0x31 /home/usuario/workspace_ucosii/StellarisWare/driverlib/gcc/libdriver.a(cpu.o)
+
+.debug_frame    0x00000000      0x210
+ .debug_frame   0x00000000      0x140 /home/usuario/workspace_ucosii/StellarisWare/drivers/rit128x96x4.o
+ .debug_frame   0x00000140       0x74 uart.o
+ .debug_frame   0x000001b4       0x5c startup_gcc.o
+
+.debug_ranges   0x00000000      0x168
+ .debug_ranges  0x00000000      0x168 uart.o
